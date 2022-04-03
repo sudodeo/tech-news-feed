@@ -25,6 +25,6 @@ Get top trending news from different blog sites in a docx file conveniently
 
 Get your news without stress :)
 
-## CONTRIBUTING
+## CONTRIBUTION
 
 You can help make this project better by reporting bugs or submitting pull requests.
