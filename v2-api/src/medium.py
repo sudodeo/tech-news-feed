@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 
 
 class Medium:
-    def __init__(self) -> None:
-        pass
-
     def start_crawl(self):
         url = 'https://medium.com/tag/programming'
         self.base_url = 'https://medium.com'
@@ -27,10 +24,10 @@ class Medium:
                 topic = i.find('h2').text
                 link = self.base_url + \
                     i.find('a', {'class': 'au av aw ax ay az ba bb bc bd be bf bg bh bi',
-                        'aria-label': 'Post Preview Title'}).get('href')
-                topic_details.append({"topic": topic, "url": link, "source": "Medium"})
+                                 'aria-label': 'Post Preview Title'}).get('href')
+                topic_details.append(
+                    {"topic": topic, "url": link, "source": "Medium"})
 
             return topic_details
         except Exception:
             return []
-

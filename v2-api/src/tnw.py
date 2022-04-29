@@ -3,9 +3,6 @@ from bs4 import BeautifulSoup
 
 
 class Tnw:
-    def __init__(self) -> None:
-        pass
-
     def start_crawl(self):
         url = 'https://thenextweb.com/latest'
         self.base_url = 'https://thenextweb.com'

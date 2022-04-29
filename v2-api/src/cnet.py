@@ -24,7 +24,8 @@ class Cnet:
             if trend_section is None:
                 print('Error, could not get trending news')
                 return []
-            trends = trend_section.find_all('div', class_='c-premiumCards_wrapper')
+            trends = trend_section.find_all(
+                'div', class_='c-premiumCards_wrapper')
             if trends is []:
                 return []
             for i in trends[:10]:
@@ -32,12 +33,13 @@ class Cnet:
                     topic = i.find('a', class_='o-linkOverlay').text
                     link = self.base_url + \
                         i.find('a', class_='o-linkOverlay').get('href')
-                    topic_details.append({"topic": topic, "url": link, "source": "Cnet"})
+                    topic_details.append(
+                        {"topic": topic, "url": link, "source": "Cnet"})
                 except Exception as e:
                     print(e)
                     print('Error2, could not get trending news')
                     return []
-            
+
             return topic_details
         except Exception:
             return []

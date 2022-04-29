@@ -1,5 +1,4 @@
 import requests
-
 from bs4 import BeautifulSoup
 
 
@@ -32,7 +31,8 @@ class Wired:
                         'h3', class_='SummaryItemHedBase-dZmlME fEkmfC summary-item__hed').text
                     link = i.find(
                         'a', class_='SummaryItemHedLink-cgPsOZ cEGVhT summary-item-tracking__hed-link summary-item__hed-link').get('href')
-                    topic_details.append({"topic": topic, "url": link, "source": "Wired"})
+                    topic_details.append(
+                        {"topic": topic, "url": link, "source": "Wired"})
                 except Exception:
                     print('Error, could not get trending news')
                     return []
