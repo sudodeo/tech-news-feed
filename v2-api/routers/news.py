@@ -4,6 +4,7 @@ from ..src import cnet, mashable, medium, tnw, wired
 
 router = APIRouter(prefix='/news')
 
+
 @router.get('/')
 def get_cnet_news():
     cnet_ = cnet.Cnet().start_crawl()
@@ -37,6 +38,7 @@ def get_medium_news():
 def get_tnw_news():
     news = tnw.Tnw().start_crawl()
     return news
+
 
 @router.get('/wired')
 def get_wired_news():
