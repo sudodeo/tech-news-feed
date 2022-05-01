@@ -6,4 +6,4 @@
 
 Get top trending news from different blog sites via an API
 
-Hosted @ *
+Hosted @ https://trendingtechnews.herokuapp.com/
