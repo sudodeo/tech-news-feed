@@ -6,7 +6,7 @@ router = APIRouter(prefix='/news')
 
 
 @router.get('/')
-def get_cnet_news():
+def get_all_news():
     cnet_ = cnet.Cnet().start_crawl()
     mashable_ = mashable.Mashable().start_crawl()
     medium_ = medium.Medium().start_crawl()
