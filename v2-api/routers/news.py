@@ -37,9 +37,3 @@ def get_medium_news():
 def get_tnw_news():
     news = tnw.Tnw().start_crawl()
     return news
-
-
-@router.get('/wired')
-def get_wired_news():
-    news = wired.Wired().start_crawl()
-    return news
