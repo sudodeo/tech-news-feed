@@ -11,8 +11,7 @@ def get_all_news():
     mashable_ = mashable.Mashable().start_crawl()
     medium_ = medium.Medium().start_crawl()
     tnw_ = tnw.Tnw().start_crawl()
-    wired_ = wired.Wired().start_crawl()
-    site_collection = [cnet_, mashable_, medium_, tnw_, wired_]
+    site_collection = [cnet_, mashable_, medium_, tnw_]
     return [news for site in site_collection for news in site]
 
 
