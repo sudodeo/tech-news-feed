@@ -18,7 +18,7 @@ app.add_middleware(
 @app.get('/')
 def home():
     endpoints = {"combined news": "/news", "cnet": "/news/cnet", "mashable": "/news/mashable",
-                 "medium": "/news/medium", "the next web": "/news/tnw", "wired": "news/wired"}
+                 "medium": "/news/medium", "the next web": "/news/tnw"}
     return {'Tech News': 'Get top trending news via this API', 'endpoints': endpoints}
 
 
