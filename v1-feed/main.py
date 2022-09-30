@@ -6,7 +6,7 @@ if news == '1':
     cnet.Cnet().start_crawl()
 elif news == '2':
     mashable.Mashable().start_crawl()
-elif news == '3':
-    wired.Wired().start_crawl()
+# elif news == '3':
+#     wired.Wired().start_crawl()
 else: 
     print("Invalid input")
